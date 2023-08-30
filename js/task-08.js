@@ -1,5 +1,4 @@
 const form = document.querySelector(".login-form");
-console.log(form);
 
 form.addEventListener("submit", getUserData);
 
@@ -10,11 +9,10 @@ function getUserData(event) {
     email: email.value,
     password: password.value,
   };
-
-  if (data.email === "" || data.password === "") {
+  if (data.email.trim() === "" || data.password.trim() === "") {
     return alert("Please fill in all the fields!");
-  } else {
-    console.log(data);
-    form.reset();
   }
+
+  console.log(data);
+  event.currentTarget.reset();
 }

@@ -11,7 +11,7 @@ let step = 0;
 function createBoxes(event) {
   event.preventDefault();
   const amount = Number(input.value);
-  console.log(amount);
+
   for (let acc = 0; acc < amount; acc += 1) {
     let newEl = document.createElement("div");
     divBoxes.appendChild(newEl);

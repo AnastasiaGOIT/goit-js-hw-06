@@ -8,13 +8,13 @@ const ingredients = [
 ];
 
 const listEl = document.querySelector("#ingredients");
-console.dir(listEl);
 
+const listArray = [];
 ingredients.forEach((item) => {
   const newEl = document.createElement("li");
   newEl.textContent = item;
   newEl.classList.add("item");
-  listEl.appendChild(newEl);
+  listArray.push(newEl);
 });
+listEl.append(...listArray);
 
-console.log(listEl);
